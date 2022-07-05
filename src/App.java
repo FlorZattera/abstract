@@ -5,26 +5,21 @@ import superclass.FigurasGeometricas;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class App {
 
     public static void main(String[] args) {
 
-        ArrayList figurasGeometricas = new ArrayList<>();
+        List<FigurasGeometricas> figurasGeometricas  = new ArrayList<>();
 
-        Triangulo triangulo = new Triangulo(2, 4);
-        Rectangulo rectangulo = new Rectangulo(3,6);
-        Circulo circulo = new Circulo(2.5);
-
-        figurasGeometricas.add(triangulo);
-        figurasGeometricas.add(rectangulo);
-        figurasGeometricas.add(circulo);
+        figurasGeometricas.add(new Triangulo(2 ,4));
+        figurasGeometricas.add(new Rectangulo(3,6));
+        figurasGeometricas.add(new Circulo(2.5));
 
         for (int i = 0; i < figurasGeometricas.size(); i++) {
-            circulo.calcularArea();
-            rectangulo.calcularArea();
-            triangulo.calcularArea();
-            System.out.println(figurasGeometricas.get(i).toString());
+            figurasGeometricas.get(i).calcularArea();
+            figurasGeometricas.get(i).toString();
 
         }
     }

@@ -13,6 +13,6 @@ public abstract class FigurasGeometricas {
         return nombreDeFigura;
     }
 
-    protected abstract double calcularArea();
+    public abstract double calcularArea();
     }
 
